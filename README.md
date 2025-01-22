@@ -55,9 +55,12 @@ Run the simulation with the following command:
 
 ### Return
 
+```
+Average yearly economic loss from hurricanes in Florida and the Gulf States: <number> Billion US dollars
 
 
-
+Theoretical average yearly economic loss from hurricanes in Florida and the Gulf States: <number> Billion US dollars
+```
 
 ## Test
 
