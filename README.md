@@ -46,12 +46,16 @@ Run the simulation with the following command:
 
 - `-n` or `--simulations`: Number of years to simulate (int)(default: 1000)
 - `--ncpu`: Number of CPUs to use for multiprocessing (int)(default: 1)
-- `--florida_landfall_rate`: Lambda parameter for the Poisson distribution for Florida (float)
-- `--florida_mean`: Mean of the lognormal distribution for economic loss in Florida (float)
-- `--florida_stddev`: Standard deviation of the lognormal distribution for economic loss in Florida (float)
-- `--gulf_landfall_rate`: Lambda parameter for the Poisson distribution for Gulf States (float)
-- `--gulf_mean`: Mean of the lognormal distribution for economic loss in Gulf States (float)
-- `--gulf_stddev`: Standard deviation of the lognormal distribution for economic loss in Gulf States (float)
+- `florida_landfall_rate`: Lambda parameter for the Poisson distribution for Florida (float)
+- `florida_mean`: Mean of the lognormal distribution for economic loss in Florida (float)
+- `florida_stddev`: Standard deviation of the lognormal distribution for economic loss in Florida (float)
+- `gulf_landfall_rate`: Lambda parameter for the Poisson distribution for Gulf States (float)
+- `gulf_mean`: Mean of the lognormal distribution for economic loss in Gulf States (float)
+- `gulf_stddev`: Standard deviation of the lognormal distribution for economic loss in Gulf States (float)
+
+### Return
+
+
 
 
 
@@ -62,3 +66,11 @@ Unit tests for this program are provided in the `test.py` file. The tests cover 
 ## Performance
 
 Running profilers on the code shows that most of the time is spent on the numpy poisson and lognormal function. I've compared it to Scipy's poisson and lognormal functions, and Numpy is much faster. I've added multiprocessing so the user can utilise multiple cores, thus increasing the processing speed. They will also have an estimate of the required time for the program to complete.
+
+
+## Ideas on future features
+
+- Have a way to test convergence to see if increasing the number of samples is necessary.
+- Every 10% of the samples, give the user a current mean and standard deviations of the samples.
+- Output all the samples to a file so more analysis can be done on the samples. Save every x% so incase the program crashes while running all progress is not lost.
+- Plot these samples on a histogram.
