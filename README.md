@@ -43,3 +43,7 @@ Run the simulation with the following command:
 ## Test
 
 Unit tests for this program are provided in the `test.py` file. The tests cover if the hurricane_rate_florida, economic_loss_florida, hurricane_rate_gulf_states, economic_loss_gulf_states create normal outputs 
+
+## Performance
+
+Running profilers on the code shows that most of the time is spent on the numpy poisson and lognormal function. I've compared it to Scipy's poisson and lognormal functions, and Numpy is much faster. I've added multiprocessing so the user can utilise multiple cores, thus increasing the processing speed. They will also have an estimate of the required time for the program to complete.
