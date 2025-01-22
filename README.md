@@ -12,8 +12,8 @@ This Python program simulates the economic loss from hurricanes in Florida and t
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/hurricane-loss-simulation.git
-    cd hurricane-loss-simulation
+    git clone https://github.com/KevinBeeson/Oasis_Technical_test
+    cd Oasis_Technical_test
     ```
 
 2. Install the required packages:
