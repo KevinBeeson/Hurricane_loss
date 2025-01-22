@@ -16,7 +16,22 @@ This Python program simulates the economic loss from hurricanes in Florida and t
     cd Oasis_Technical_test
     ```
 
-2. Install the required packages:
+2. Create a virtual environment (recommended):
+    ```bash
+    python -m venv Oasis
+    ```
+
+3. Activate the virtual environment:
+    - On Linux:
+        ```bash
+        source Oasis/bin/activate
+        ```
+    - On Windows:
+        ```bash
+        ./Oasis/scripts/activate
+        ```
+
+4. Install the required packages:
     ```bash
     pip install numpy tqdm
     ```
