@@ -17,8 +17,7 @@ def hurricane_rate_florida(florida_landfall_rate=1.0):
     number of hurricanes per year: int
     
     """
-    answer=np.random.poisson(florida_landfall_rate,1)
-    return answer[0]
+    return np.random.poisson(florida_landfall_rate,1)[0]
 def economic_loss_florida(florida_mean=10.0,florida_stddev=1.0):
     """Returns the economic loss from a hurricane in Florida modeled as a lognormal distribution.
     Parameters

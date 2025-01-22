@@ -25,18 +25,19 @@ This Python program simulates the economic loss from hurricanes in Florida and t
 
 Run the simulation with the following command:
 ```bash
- python gethurricaneloss.py -n <number_of_simulations> -ncpu <number of cpu used><florida_landfall_rate><florida_mean><florida_stddev><><gulf_landfall_rate><gulf_mean><gulf_stddev>
+ python gethurricaneloss.py -n <number_of_simulations> -ncpu <number of cpu used> <florida_landfall_rate> <florida_mean> <florida_stddev> <gulf_landfall_rate> <gulf_mean> <gulf_stddev>
 ```
  ### Arguments
 
 - `-n` or `--simulations`: Number of years to simulate (int)(default: 1000)
+- `--ncpu`: Number of CPUs to use for multiprocessing (int)(default: 1)
 - `--florida_landfall_rate`: Lambda parameter for the Poisson distribution for Florida (float)
 - `--florida_mean`: Mean of the lognormal distribution for economic loss in Florida (float)
 - `--florida_stddev`: Standard deviation of the lognormal distribution for economic loss in Florida (float)
 - `--gulf_landfall_rate`: Lambda parameter for the Poisson distribution for Gulf States (float)
 - `--gulf_mean`: Mean of the lognormal distribution for economic loss in Gulf States (float)
 - `--gulf_stddev`: Standard deviation of the lognormal distribution for economic loss in Gulf States (float)
-- `--ncpu`: Number of CPUs to use for multiprocessing (int)(default: 1)
+
 
 
 ## Test
