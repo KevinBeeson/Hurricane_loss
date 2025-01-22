@@ -62,6 +62,27 @@ Average yearly economic loss from hurricanes in Florida and the Gulf States: <nu
 Theoretical average yearly economic loss from hurricanes in Florida and the Gulf States: <number> Billion US dollars
 ```
 
+### Example 
+
+```bash
+python gethurricaneloss.py -n 50000 1 2.3 1 2 2 1 -ncpu 7
+```
+#### returns 
+```
+INFO:root:Running Monte Carlo simulation with the following parameters:
+INFO:root:Number of Monte Carlo samples: 50000
+INFO:root:Florida average landfall rate: 1.000000
+INFO:root:Florida mean lognormal variable for economic loss: 2.300000
+INFO:root:Florida standard lognormal variable for deviation: 1.000000
+INFO:root:Gulf States average landfall rate: 2.000000
+INFO:root:Gulf States lognormal variable  mean economic loss: 2.000000
+INFO:root:Gulf States lognormal variable  standard deviation: 1.000000
+INFO:root:Number of CPUs to use for multiprocessing: 7
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50000/50000 [00:02<00:00, 23032.07it/s]
+INFO:root:Average yearly economic loss from hurricanes in Florida and the Gulf States: 40.695446 Billion US dollars
+INFO:root:Theoretical average yearly economic loss from hurricanes in Florida and the Gulf States: 40.809635 Billion US dollars
+
+```
 ## Test
 
 Unit tests for this program are provided in the `test.py` file. The tests cover if the hurricane_rate_florida, economic_loss_florida, hurricane_rate_gulf_states, economic_loss_gulf_states create normal outputs 
