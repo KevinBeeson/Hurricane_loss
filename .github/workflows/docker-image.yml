@@ -16,3 +16,6 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build . -t kevinbeeson/hurricane_loss:latest
+    - name: push image to docker hub
+          docker login -u kevinbeeson -p ${{ secrets.DOCKER_HUB_TOKEN }}
+          docker push kevinbeeson/hurricane_loss:latest
