@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . -t kevinbeeson/Hurricane_loss:latest
+      run: docker build . -t kevinbeeson/hurricane_loss:latest
