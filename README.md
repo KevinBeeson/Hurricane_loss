@@ -67,7 +67,7 @@ Theoretical average yearly economic loss from hurricanes in Florida and the Gulf
 ```bash
 python gethurricaneloss.py -n 50000 1 2.3 1 2 2 1 -ncpu 7
 ```
-#### returns 
+#### Returns 
 ```
 INFO:root:Running Monte Carlo simulation with the following parameters:
 INFO:root:Number of Monte Carlo samples: 50000
