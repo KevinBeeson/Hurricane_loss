@@ -1,22 +1,22 @@
-name: Docker README
-
+name: Update Docker Hub Description
 on:
-  [workflow_dispatch]
-
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - .github/workflows/docker-readme.yml
 jobs:
-
-  build:
-
+  dockerHubDescription:
     runs-on: ubuntu-latest
-
     steps:
-    
-    
     - uses: actions/checkout@v4
 
     - name: Docker Hub Description
       uses: peter-evans/dockerhub-description@v4
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKER_HUB_TOKEN }}
-        repository: kevinbeeson/hurricane_loss
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        repository: kevinbeeson/Hurricane_loss-description
+        short-description: ${{ github.event.repository.description }}
+        enable-url-completion: true
