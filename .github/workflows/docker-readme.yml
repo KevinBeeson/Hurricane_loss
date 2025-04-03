@@ -19,4 +19,4 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_TOKEN }}
-        repository: kevinbeeson/hurricane_loss-description
+        repository: kevinbeeson/hurricane_loss
