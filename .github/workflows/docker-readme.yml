@@ -1,11 +1,7 @@
 name: Docker README
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-     - 'README.md'
+  [workflow_dispacth]
 
 jobs:
 
