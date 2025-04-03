@@ -12,35 +12,57 @@ This Python program simulates the economic loss from hurricanes in Florida and t
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/KevinBeeson/Oasis_Technical_test
-    cd Oasis_Technical_test
+    git clone https://github.com/KevinBeeson/Hurricane_loss
+    cd Hurricane_loss
     ```
 
 2. Create a virtual environment (recommended):
     ```bash
-    python -m venv Oasis
+    python -m venv Hurricane_loss
     ```
 
 3. Activate the virtual environment:
     - On Linux:
         ```bash
-        source Oasis/bin/activate
+        source Hurricane_loss/bin/activate
         ```
     - On Windows:
         ```bash
-        ./Oasis/scripts/activate
+        ./Hurricane_loss/scripts/activate
         ```
 
 4. Install the required packages:
     ```bash
     pip install numpy tqdm
     ```
+    or 
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Using Docker
+
+You can run the Hurricane Loss Simulation using a pre-built Docker image available on [Docker Hub](https://hub.docker.com/r/kevinbeeson/hurricane_loss), eliminating the need to build it locally.
+
+### 1. Pull the Docker Image if you would like it saved locally or just run the docker command
+
+```bash
+docker pull kevinbeeson/hurricane_loss
+```
+
 
 ## Usage
 
 Run the simulation with the following command:
 ```bash
  python gethurricaneloss.py -n <number_of_simulations> -ncpu <number of cpu used> <florida_landfall_rate> <florida_mean> <florida_stddev> <gulf_landfall_rate> <gulf_mean> <gulf_stddev>
+```
+
+or when using docker
+
+```bash
+docker run --rm kevinbeeson/hurricane_loss gethurricaneloss.py -n <number_of_simulations> -ncpu <number of cpu used> <florida_landfall_rate> <florida_mean> <florida_stddev> <gulf_landfall_rate> <gulf_mean> <gulf_stddev>
 ```
  ### Arguments
 
