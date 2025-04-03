@@ -17,6 +17,6 @@ jobs:
     - name: Docker Hub Description
       uses: peter-evans/dockerhub-description@v4
       with:
-        username: kevinbeeson
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_TOKEN }}
         repository: kevinbeeson/hurricane_loss-description
