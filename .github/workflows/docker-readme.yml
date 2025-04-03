@@ -19,4 +19,3 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         repository: kevinbeeson/Hurricane_loss-description
         short-description: ${{ github.event.repository.description }}
-        enable-url-completion: true
