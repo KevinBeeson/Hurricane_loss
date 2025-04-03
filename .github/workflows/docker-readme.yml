@@ -17,5 +17,5 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
-        repository: kevinbeeson/Hurricane_loss-description
+        repository: kevinbeeson/hurricane_loss
         short-description: ${{ github.event.repository.description }}
